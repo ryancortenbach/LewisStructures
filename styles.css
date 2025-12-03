@@ -1,0 +1,1125 @@
+/* CSS Variables */
+:root {
+    --primary-color: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary-color: #7c3aed;
+    --accent-color: #06b6d4;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --error-color: #ef4444;
+    --text-primary: #1f2937;
+    --text-secondary: #4b5563;
+    --text-light: #6b7280;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f3f4f6;
+    --bg-tertiary: #e5e7eb;
+    --border-color: #d1d5db;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--primary-dark);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    padding: 140px 24px 80px;
+    background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 50%, #fefce8 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+.description {
+    color: var(--text-light);
+    margin-bottom: 32px;
+    font-size: 1.1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    font-weight: 600;
+    border-radius: var(--radius-lg);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    color: white;
+}
+
+.hero-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.molecule-display {
+    background: white;
+    padding: 40px;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+}
+
+.water-molecule {
+    position: relative;
+    width: 200px;
+    height: 150px;
+}
+
+.water-molecule .atom {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.water-molecule .oxygen {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+    top: 50px;
+    left: 75px;
+}
+
+.water-molecule .hydrogen {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+}
+
+.water-molecule .h-left {
+    top: 55px;
+    left: 10px;
+}
+
+.water-molecule .h-right {
+    top: 55px;
+    right: 10px;
+}
+
+.water-molecule .bond {
+    position: absolute;
+    height: 4px;
+    background: var(--text-primary);
+    top: 73px;
+}
+
+.water-molecule .bond-left {
+    width: 30px;
+    left: 45px;
+}
+
+.water-molecule .bond-right {
+    width: 30px;
+    right: 45px;
+}
+
+.water-molecule .lone-pair {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--text-primary);
+    border-radius: 50%;
+}
+
+.water-molecule .lp-top {
+    top: 35px;
+    left: 96px;
+}
+
+.water-molecule .lp-top::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--text-primary);
+    border-radius: 50%;
+    left: 20px;
+}
+
+.water-molecule .lp-bottom {
+    top: 115px;
+    left: 96px;
+}
+
+.water-molecule .lp-bottom::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--text-primary);
+    border-radius: 50%;
+    left: 20px;
+}
+
+.molecule-label {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+/* Sections */
+.section {
+    padding: 80px 0;
+}
+
+.section-alt {
+    background-color: var(--bg-secondary);
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+}
+
+.section-intro {
+    text-align: center;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto 48px;
+    font-size: 1.1rem;
+}
+
+/* Content Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.text-content p {
+    margin-bottom: 16px;
+    color: var(--text-secondary);
+}
+
+.key-concept {
+    background: linear-gradient(135deg, #eff6ff, #f0fdf4);
+    border-left: 4px solid var(--primary-color);
+    padding: 20px;
+    border-radius: var(--radius-md);
+    margin-top: 24px;
+}
+
+.key-concept h4 {
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.key-concept p {
+    margin-bottom: 0;
+}
+
+/* Lewis Example */
+.lewis-example {
+    background: white;
+    padding: 24px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.lewis-example h4 {
+    text-align: center;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+}
+
+.structure-svg {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+.atom-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    fill: var(--text-primary);
+}
+
+.annotation {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    fill: var(--text-light);
+}
+
+/* Group Cards */
+.periodic-guide {
+    margin-bottom: 48px;
+}
+
+.periodic-guide h3 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.group-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+}
+
+.group-card {
+    background: white;
+    padding: 16px;
+    border-radius: var(--radius-md);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.group-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.group-number {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+}
+
+.valence-count {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.examples {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 12px;
+}
+
+.dot-representation {
+    font-family: 'JetBrains Mono', monospace;
+    background: var(--bg-secondary);
+    padding: 8px;
+    border-radius: var(--radius-sm);
+}
+
+.dot-representation .element {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.dot-representation .dots {
+    color: var(--text-primary);
+}
+
+/* Octet Rule */
+.octet-rule {
+    background: white;
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.octet-rule h3 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.rule-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: center;
+}
+
+.rule-text p {
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.octet-example {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.1rem;
+}
+
+.octet-example .label {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-bottom: 8px;
+}
+
+.octet-example .arrow {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* Steps Section */
+.steps-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.step {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 32px;
+    background: white;
+    padding: 24px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.step-number {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.step-content h3 {
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.step-content p {
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+.step-example {
+    background: var(--bg-secondary);
+    padding: 16px;
+    border-radius: var(--radius-md);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+}
+
+.step-example strong {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+}
+
+.step-example p {
+    margin-bottom: 4px;
+    color: var(--text-secondary);
+}
+
+.step-example .total {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-top: 8px;
+}
+
+.step-example .bond-diagram,
+.step-example .structure-diagram {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 12px;
+    background: white;
+    border-radius: var(--radius-sm);
+    margin: 12px 0;
+}
+
+.step-example .structure-diagram.final {
+    background: linear-gradient(135deg, #dcfce7, #d1fae5);
+    color: var(--success-color);
+}
+
+.step-example .success {
+    color: var(--success-color);
+    font-weight: 600;
+}
+
+/* Examples Grid */
+.examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.example-card {
+    background: white;
+    padding: 24px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.example-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.molecule-formula {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.molecule-name {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+.lewis-preview {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.mini-lewis {
+    width: 100%;
+    max-width: 140px;
+}
+
+.mini-lewis .center-atom,
+.mini-lewis .outer-atom {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    fill: var(--text-primary);
+}
+
+.electron-count {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    background: var(--bg-secondary);
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    padding: 32px;
+    border-radius: var(--radius-xl);
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-light);
+    transition: color 0.2s ease;
+}
+
+.close-modal:hover {
+    color: var(--text-primary);
+}
+
+/* Formal Charge */
+.formula-box {
+    background: linear-gradient(135deg, #eff6ff, #faf5ff);
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.formula-box h3 {
+    margin-bottom: 16px;
+}
+
+.formula {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+}
+
+.formula-legend {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.formula-legend p {
+    color: var(--text-secondary);
+}
+
+.formal-charge-rules {
+    background: white;
+    padding: 24px;
+    border-radius: var(--radius-lg);
+    margin-bottom: 32px;
+}
+
+.formal-charge-rules h3 {
+    margin-bottom: 16px;
+}
+
+.rules-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.rules-list li {
+    padding: 12px 16px;
+    padding-left: 40px;
+    position: relative;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--bg-secondary);
+}
+
+.rules-list li:last-child {
+    border-bottom: none;
+}
+
+.rules-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 12px;
+    color: var(--success-color);
+    font-weight: 700;
+}
+
+.fc-example {
+    background: white;
+    padding: 24px;
+    border-radius: var(--radius-lg);
+}
+
+.fc-example h3 {
+    margin-bottom: 16px;
+}
+
+.fc-calculation {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.fc-molecule {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.fc-atom {
+    position: relative;
+}
+
+.fc-value {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.75rem;
+    background: var(--success-color);
+    color: white;
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+}
+
+.fc-details p {
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.fc-sum {
+    font-weight: 600;
+    color: var(--success-color);
+    margin-top: 8px;
+}
+
+/* Resonance */
+.resonance-explanation {
+    max-width: 700px;
+    margin: 0 auto 32px;
+}
+
+.resonance-text p {
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+.resonance-example {
+    background: white;
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.resonance-example h3 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.resonance-structures {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.resonance-form {
+    background: var(--bg-secondary);
+    padding: 16px;
+    border-radius: var(--radius-md);
+}
+
+.resonance-svg {
+    width: 150px;
+}
+
+.resonance-arrow {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.resonance-note {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-top: 24px;
+    font-style: italic;
+}
+
+/* Exceptions */
+.exceptions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.exception-card {
+    background: white;
+    padding: 24px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.exception-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+
+.exception-card p {
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+.exception-examples {
+    background: var(--bg-secondary);
+    padding: 16px;
+    border-radius: var(--radius-md);
+}
+
+.exception-molecule {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.exception-molecule:last-child {
+    border-bottom: none;
+}
+
+.exception-molecule strong {
+    color: var(--text-primary);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Practice Section */
+.practice-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.practice-problem {
+    background: white;
+    padding: 24px;
+    border-radius: var(--radius-lg);
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-sm);
+}
+
+.problem-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.problem-number {
+    width: 32px;
+    height: 32px;
+    background: var(--bg-secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.problem-header .molecule {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.difficulty {
+    margin-left: auto;
+    padding: 4px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.difficulty.easy {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.difficulty.medium {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.difficulty.hard {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.reveal-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+.reveal-btn:hover {
+    background: var(--primary-dark);
+}
+
+.answer {
+    margin-top: 16px;
+    padding: 16px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--success-color);
+}
+
+.answer.hidden {
+    display: none;
+}
+
+.answer p {
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.answer p:last-child {
+    margin-bottom: 0;
+}
+
+/* Reference Section */
+.reference-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.reference-card {
+    background: var(--bg-secondary);
+    padding: 24px;
+    border-radius: var(--radius-lg);
+}
+
+.reference-card h3 {
+    margin-bottom: 16px;
+    color: var(--text-primary);
+}
+
+.reference-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.reference-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.reference-table tr:last-child td {
+    border-bottom: none;
+}
+
+.reference-table td:first-child {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.reference-note {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+}
+
+.electronegativity-scale {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background: linear-gradient(90deg, #fee2e2, #fef3c7, #dcfce7);
+    border-radius: var(--radius-md);
+    margin-bottom: 12px;
+}
+
+.en-low {
+    color: #991b1b;
+    font-weight: 600;
+}
+
+.en-high {
+    color: #166534;
+    font-weight: 600;
+}
+
+.en-arrow {
+    font-size: 1.5rem;
+    color: var(--text-light);
+}
+
+.en-order {
+    font-family: 'JetBrains Mono', monospace;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+/* Footer */
+.footer {
+    background: var(--text-primary);
+    color: white;
+    padding: 40px 24px;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        padding: 120px 24px 60px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rule-content {
+        grid-template-columns: 1fr;
+    }
+
+    .octet-example {
+        flex-direction: column;
+    }
+
+    .step {
+        flex-direction: column;
+    }
+
+    .fc-calculation {
+        flex-direction: column;
+    }
+
+    .resonance-structures {
+        flex-direction: column;
+    }
+
+    .formula-legend {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

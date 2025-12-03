@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lewis Structures - A Visual Guide to Chemical Bonding</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Lewis Structures</a>
+            <ul class="nav-links">
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#valence">Valence Electrons</a></li>
+                <li><a href="#steps">How to Draw</a></li>
+                <li><a href="#examples">Examples</a></li>
+                <li><a href="#practice">Practice</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Lewis Structures</h1>
+            <p class="subtitle">A Visual Guide to Understanding Chemical Bonding</p>
+            <p class="description">Learn how atoms share electrons to form molecules through simple dot-and-line diagrams developed by Gilbert N. Lewis in 1916.</p>
+            <a href="#introduction" class="cta-button">Start Learning</a>
+        </div>
+        <div class="hero-visual">
+            <div class="molecule-display">
+                <div class="water-molecule">
+                    <div class="atom oxygen">O</div>
+                    <div class="bond bond-left"></div>
+                    <div class="bond bond-right"></div>
+                    <div class="atom hydrogen h-left">H</div>
+                    <div class="atom hydrogen h-right">H</div>
+                    <div class="lone-pair lp-top"></div>
+                    <div class="lone-pair lp-bottom"></div>
+                </div>
+                <p class="molecule-label">Water (H₂O)</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Introduction Section -->
+        <section id="introduction" class="section">
+            <div class="container">
+                <h2>What Are Lewis Structures?</h2>
+                <div class="content-grid">
+                    <div class="text-content">
+                        <p>Lewis structures, also called Lewis dot diagrams or electron dot structures, are diagrams that show the bonding between atoms in a molecule and the lone pairs of electrons that may exist.</p>
+                        <p>They were introduced by <strong>Gilbert N. Lewis</strong> in his 1916 paper "The Atom and the Molecule" and remain one of the most useful tools for understanding molecular structure.</p>
+                        <div class="key-concept">
+                            <h4>Key Concept</h4>
+                            <p>Lewis structures show <strong>valence electrons</strong> as dots around atomic symbols. Bonding electrons are shown as lines between atoms, while non-bonding electrons (lone pairs) are shown as pairs of dots.</p>
+                        </div>
+                    </div>
+                    <div class="visual-content">
+                        <div class="lewis-example">
+                            <h4>Anatomy of a Lewis Structure</h4>
+                            <div class="annotated-structure">
+                                <svg viewBox="0 0 300 200" class="structure-svg">
+                                    <!-- Oxygen atom -->
+                                    <circle cx="150" cy="100" r="25" fill="#e74c3c" opacity="0.2"/>
+                                    <text x="150" y="107" text-anchor="middle" class="atom-label">O</text>
+
+                                    <!-- Hydrogen atoms -->
+                                    <circle cx="70" cy="100" r="18" fill="#3498db" opacity="0.2"/>
+                                    <text x="70" y="107" text-anchor="middle" class="atom-label">H</text>
+
+                                    <circle cx="230" cy="100" r="18" fill="#3498db" opacity="0.2"/>
+                                    <text x="230" y="107" text-anchor="middle" class="atom-label">H</text>
+
+                                    <!-- Bonds -->
+                                    <line x1="88" y1="100" x2="125" y2="100" stroke="#333" stroke-width="3"/>
+                                    <line x1="175" y1="100" x2="212" y2="100" stroke="#333" stroke-width="3"/>
+
+                                    <!-- Lone pairs on oxygen -->
+                                    <circle cx="140" cy="65" r="4" fill="#333"/>
+                                    <circle cx="160" cy="65" r="4" fill="#333"/>
+                                    <circle cx="140" cy="135" r="4" fill="#333"/>
+                                    <circle cx="160" cy="135" r="4" fill="#333"/>
+
+                                    <!-- Annotations -->
+                                    <line x1="150" y1="55" x2="150" y2="30" stroke="#666" stroke-width="1" stroke-dasharray="4"/>
+                                    <text x="150" y="20" text-anchor="middle" class="annotation">Lone pairs</text>
+
+                                    <line x1="106" y1="85" x2="106" y2="60" stroke="#666" stroke-width="1" stroke-dasharray="4"/>
+                                    <text x="106" y="50" text-anchor="middle" class="annotation">Single bond</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Valence Electrons Section -->
+        <section id="valence" class="section section-alt">
+            <div class="container">
+                <h2>Understanding Valence Electrons</h2>
+                <p class="section-intro">Valence electrons are the electrons in the outermost shell of an atom. These are the electrons involved in chemical bonding.</p>
+
+                <div class="periodic-guide">
+                    <h3>Finding Valence Electrons from the Periodic Table</h3>
+                    <div class="group-cards">
+                        <div class="group-card">
+                            <div class="group-number">Group 1</div>
+                            <div class="valence-count">1 valence e⁻</div>
+                            <div class="examples">H, Li, Na, K</div>
+                            <div class="dot-representation">
+                                <span class="element">Na</span>
+                                <span class="dots">•</span>
+                            </div>
+                        </div>
+                        <div class="group-card">
+                            <div class="group-number">Group 2</div>
+                            <div class="valence-count">2 valence e⁻</div>
+                            <div class="examples">Be, Mg, Ca</div>
+                            <div class="dot-representation">
+                                <span class="element">Mg</span>
+                                <span class="dots">• •</span>
+                            </div>
+                        </div>
+                        <div class="group-card">
+                            <div class="group-number">Group 13</div>
+                            <div class="valence-count">3 valence e⁻</div>
+                            <div class="examples">B, Al</div>
+                            <div class="dot-representation">
+                                <span class="element">B</span>
+                                <span class="dots">• • •</span>
+                            </div>
+                        </div>
+                        <div class="group-card">
+                            <div class="group-number">Group 14</div>
+                            <div class="valence-count">4 valence e⁻</div>
+                            <div class="examples">C, Si</div>
+                            <div class="dot-representation">
+                                <span class="element">C</span>
+                                <span class="dots">• • • •</span>
+                            </div>
+                        </div>
+                        <div class="group-card">
+                            <div class="group-number">Group 15</div>
+                            <div class="valence-count">5 valence e⁻</div>
+                            <div class="examples">N, P</div>
+                            <div class="dot-representation">
+                                <span class="element">N</span>
+                                <span class="dots">• • • • •</span>
+                            </div>
+                        </div>
+                        <div class="group-card">
+                            <div class="group-number">Group 16</div>
+                            <div class="valence-count">6 valence e⁻</div>
+                            <div class="examples">O, S</div>
+                            <div class="dot-representation">
+                                <span class="element">O</span>
+                                <span class="dots">• • • • • •</span>
+                            </div>
+                        </div>
+                        <div class="group-card">
+                            <div class="group-number">Group 17</div>
+                            <div class="valence-count">7 valence e⁻</div>
+                            <div class="examples">F, Cl, Br</div>
+                            <div class="dot-representation">
+                                <span class="element">Cl</span>
+                                <span class="dots">• • • • • • •</span>
+                            </div>
+                        </div>
+                        <div class="group-card">
+                            <div class="group-number">Group 18</div>
+                            <div class="valence-count">8 valence e⁻</div>
+                            <div class="examples">Ne, Ar</div>
+                            <div class="dot-representation">
+                                <span class="element">Ne</span>
+                                <span class="dots">• • • • • • • •</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="octet-rule">
+                    <h3>The Octet Rule</h3>
+                    <div class="rule-content">
+                        <div class="rule-text">
+                            <p>Atoms tend to gain, lose, or share electrons to achieve a full outer shell of <strong>8 electrons</strong> (like the noble gases).</p>
+                            <p><strong>Exception:</strong> Hydrogen only needs 2 electrons (duet rule) to fill its outer shell.</p>
+                        </div>
+                        <div class="rule-visual">
+                            <div class="octet-example">
+                                <div class="before">
+                                    <span class="label">Before bonding</span>
+                                    <div class="atoms-separate">
+                                        <span>Na• + •Cl:</span>
+                                    </div>
+                                </div>
+                                <div class="arrow">→</div>
+                                <div class="after">
+                                    <span class="label">After bonding</span>
+                                    <div class="atoms-bonded">
+                                        <span>Na⁺ [:Cl:]⁻</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Steps Section -->
+        <section id="steps" class="section">
+            <div class="container">
+                <h2>How to Draw Lewis Structures</h2>
+                <p class="section-intro">Follow these five steps to draw the Lewis structure of any molecule.</p>
+
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Count Total Valence Electrons</h3>
+                            <p>Add up all valence electrons from each atom. For ions, add electrons for negative charges or subtract for positive charges.</p>
+                            <div class="step-example">
+                                <strong>Example: CO₂</strong>
+                                <p>Carbon: 4 e⁻ × 1 = 4</p>
+                                <p>Oxygen: 6 e⁻ × 2 = 12</p>
+                                <p class="total">Total: 16 valence electrons</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Identify the Central Atom</h3>
+                            <p>The central atom is usually the least electronegative element (excluding hydrogen). It's often the atom that can form the most bonds.</p>
+                            <div class="step-example">
+                                <strong>Common central atoms:</strong>
+                                <p>C, N, S, P (not H or halogens)</p>
+                                <p>In CO₂: Carbon is central</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Draw Single Bonds First</h3>
+                            <p>Connect each outer atom to the central atom with a single bond. Each bond uses 2 electrons.</p>
+                            <div class="step-example">
+                                <div class="bond-diagram">O — C — O</div>
+                                <p>Used: 4 electrons (2 bonds × 2 e⁻)</p>
+                                <p>Remaining: 12 electrons</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Complete Octets on Outer Atoms</h3>
+                            <p>Distribute remaining electrons as lone pairs on outer atoms first, giving each atom 8 electrons (2 for hydrogen).</p>
+                            <div class="step-example">
+                                <div class="structure-diagram">
+                                    :O — C — O:
+                                </div>
+                                <p>Each O gets 6 more e⁻ (3 lone pairs)</p>
+                                <p>Used: 12 electrons</p>
+                                <p>Remaining: 0 electrons</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Form Multiple Bonds if Needed</h3>
+                            <p>If the central atom doesn't have an octet, convert lone pairs from outer atoms into bonding pairs (double or triple bonds).</p>
+                            <div class="step-example">
+                                <p>Carbon only has 4 e⁻, needs 4 more!</p>
+                                <p>Move lone pairs to form double bonds:</p>
+                                <div class="structure-diagram final">
+                                    O = C = O
+                                </div>
+                                <p class="success">Now all atoms have octets!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Examples Section -->
+        <section id="examples" class="section section-alt">
+            <div class="container">
+                <h2>Lewis Structure Examples</h2>
+                <p class="section-intro">Click on any molecule to see its Lewis structure and explanation.</p>
+
+                <div class="examples-grid">
+                    <div class="example-card" data-molecule="h2o">
+                        <div class="molecule-formula">H₂O</div>
+                        <div class="molecule-name">Water</div>
+                        <div class="lewis-preview">
+                            <svg viewBox="0 0 120 100" class="mini-lewis">
+                                <text x="60" y="55" text-anchor="middle" class="center-atom">O</text>
+                                <text x="20" y="55" text-anchor="middle" class="outer-atom">H</text>
+                                <text x="100" y="55" text-anchor="middle" class="outer-atom">H</text>
+                                <line x1="35" y1="50" x2="48" y2="50" stroke="#333" stroke-width="2"/>
+                                <line x1="72" y1="50" x2="85" y2="50" stroke="#333" stroke-width="2"/>
+                                <circle cx="55" cy="30" r="3" fill="#333"/>
+                                <circle cx="65" cy="30" r="3" fill="#333"/>
+                                <circle cx="55" cy="70" r="3" fill="#333"/>
+                                <circle cx="65" cy="70" r="3" fill="#333"/>
+                            </svg>
+                        </div>
+                        <div class="electron-count">8 valence e⁻</div>
+                    </div>
+
+                    <div class="example-card" data-molecule="co2">
+                        <div class="molecule-formula">CO₂</div>
+                        <div class="molecule-name">Carbon Dioxide</div>
+                        <div class="lewis-preview">
+                            <svg viewBox="0 0 140 80" class="mini-lewis">
+                                <text x="70" y="45" text-anchor="middle" class="center-atom">C</text>
+                                <text x="20" y="45" text-anchor="middle" class="outer-atom">O</text>
+                                <text x="120" y="45" text-anchor="middle" class="outer-atom">O</text>
+                                <line x1="35" y1="38" x2="55" y2="38" stroke="#333" stroke-width="2"/>
+                                <line x1="35" y1="45" x2="55" y2="45" stroke="#333" stroke-width="2"/>
+                                <line x1="85" y1="38" x2="105" y2="38" stroke="#333" stroke-width="2"/>
+                                <line x1="85" y1="45" x2="105" y2="45" stroke="#333" stroke-width="2"/>
+                                <circle cx="10" cy="30" r="3" fill="#333"/>
+                                <circle cx="10" cy="55" r="3" fill="#333"/>
+                                <circle cx="130" cy="30" r="3" fill="#333"/>
+                                <circle cx="130" cy="55" r="3" fill="#333"/>
+                            </svg>
+                        </div>
+                        <div class="electron-count">16 valence e⁻</div>
+                    </div>
+
+                    <div class="example-card" data-molecule="nh3">
+                        <div class="molecule-formula">NH₃</div>
+                        <div class="molecule-name">Ammonia</div>
+                        <div class="lewis-preview">
+                            <svg viewBox="0 0 120 100" class="mini-lewis">
+                                <text x="60" y="50" text-anchor="middle" class="center-atom">N</text>
+                                <text x="25" y="80" text-anchor="middle" class="outer-atom">H</text>
+                                <text x="60" y="95" text-anchor="middle" class="outer-atom">H</text>
+                                <text x="95" y="80" text-anchor="middle" class="outer-atom">H</text>
+                                <line x1="50" y1="55" x2="35" y2="70" stroke="#333" stroke-width="2"/>
+                                <line x1="60" y1="58" x2="60" y2="78" stroke="#333" stroke-width="2"/>
+                                <line x1="70" y1="55" x2="85" y2="70" stroke="#333" stroke-width="2"/>
+                                <circle cx="55" cy="25" r="3" fill="#333"/>
+                                <circle cx="65" cy="25" r="3" fill="#333"/>
+                            </svg>
+                        </div>
+                        <div class="electron-count">8 valence e⁻</div>
+                    </div>
+
+                    <div class="example-card" data-molecule="ch4">
+                        <div class="molecule-formula">CH₄</div>
+                        <div class="molecule-name">Methane</div>
+                        <div class="lewis-preview">
+                            <svg viewBox="0 0 120 120" class="mini-lewis">
+                                <text x="60" y="65" text-anchor="middle" class="center-atom">C</text>
+                                <text x="60" y="25" text-anchor="middle" class="outer-atom">H</text>
+                                <text x="25" y="65" text-anchor="middle" class="outer-atom">H</text>
+                                <text x="95" y="65" text-anchor="middle" class="outer-atom">H</text>
+                                <text x="60" y="105" text-anchor="middle" class="outer-atom">H</text>
+                                <line x1="60" y1="50" x2="60" y2="32" stroke="#333" stroke-width="2"/>
+                                <line x1="48" y1="60" x2="35" y2="60" stroke="#333" stroke-width="2"/>
+                                <line x1="72" y1="60" x2="85" y2="60" stroke="#333" stroke-width="2"/>
+                                <line x1="60" y1="72" x2="60" y2="90" stroke="#333" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="electron-count">8 valence e⁻</div>
+                    </div>
+
+                    <div class="example-card" data-molecule="n2">
+                        <div class="molecule-formula">N₂</div>
+                        <div class="molecule-name">Nitrogen Gas</div>
+                        <div class="lewis-preview">
+                            <svg viewBox="0 0 120 80" class="mini-lewis">
+                                <text x="35" y="45" text-anchor="middle" class="center-atom">N</text>
+                                <text x="85" y="45" text-anchor="middle" class="center-atom">N</text>
+                                <line x1="48" y1="35" x2="72" y2="35" stroke="#333" stroke-width="2"/>
+                                <line x1="48" y1="42" x2="72" y2="42" stroke="#333" stroke-width="2"/>
+                                <line x1="48" y1="49" x2="72" y2="49" stroke="#333" stroke-width="2"/>
+                                <circle cx="15" cy="40" r="3" fill="#333"/>
+                                <circle cx="15" cy="50" r="3" fill="#333"/>
+                                <circle cx="105" cy="40" r="3" fill="#333"/>
+                                <circle cx="105" cy="50" r="3" fill="#333"/>
+                            </svg>
+                        </div>
+                        <div class="electron-count">10 valence e⁻</div>
+                    </div>
+
+                    <div class="example-card" data-molecule="hcl">
+                        <div class="molecule-formula">HCl</div>
+                        <div class="molecule-name">Hydrogen Chloride</div>
+                        <div class="lewis-preview">
+                            <svg viewBox="0 0 120 80" class="mini-lewis">
+                                <text x="35" y="45" text-anchor="middle" class="outer-atom">H</text>
+                                <text x="85" y="45" text-anchor="middle" class="center-atom">Cl</text>
+                                <line x1="48" y1="40" x2="68" y2="40" stroke="#333" stroke-width="2"/>
+                                <circle cx="100" cy="25" r="3" fill="#333"/>
+                                <circle cx="100" cy="55" r="3" fill="#333"/>
+                                <circle cx="85" cy="20" r="3" fill="#333"/>
+                                <circle cx="85" cy="60" r="3" fill="#333"/>
+                                <circle cx="105" cy="40" r="3" fill="#333"/>
+                                <circle cx="110" cy="40" r="3" fill="#333"/>
+                            </svg>
+                        </div>
+                        <div class="electron-count">8 valence e⁻</div>
+                    </div>
+
+                    <div class="example-card" data-molecule="o3">
+                        <div class="molecule-formula">O₃</div>
+                        <div class="molecule-name">Ozone (Resonance)</div>
+                        <div class="lewis-preview">
+                            <svg viewBox="0 0 140 80" class="mini-lewis">
+                                <text x="70" y="45" text-anchor="middle" class="center-atom">O</text>
+                                <text x="25" y="45" text-anchor="middle" class="outer-atom">O</text>
+                                <text x="115" y="45" text-anchor="middle" class="outer-atom">O</text>
+                                <line x1="38" y1="40" x2="55" y2="40" stroke="#333" stroke-width="2"/>
+                                <line x1="85" y1="38" x2="100" y2="38" stroke="#333" stroke-width="2"/>
+                                <line x1="85" y1="45" x2="100" y2="45" stroke="#333" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="electron-count">18 valence e⁻</div>
+                    </div>
+
+                    <div class="example-card" data-molecule="hno3">
+                        <div class="molecule-formula">HNO₃</div>
+                        <div class="molecule-name">Nitric Acid</div>
+                        <div class="lewis-preview">
+                            <svg viewBox="0 0 140 100" class="mini-lewis">
+                                <text x="70" y="55" text-anchor="middle" class="center-atom">N</text>
+                                <text x="25" y="55" text-anchor="middle" class="outer-atom">O</text>
+                                <text x="115" y="55" text-anchor="middle" class="outer-atom">O</text>
+                                <text x="70" y="25" text-anchor="middle" class="outer-atom">O</text>
+                                <text x="70" y="95" text-anchor="middle" class="outer-atom">H</text>
+                                <line x1="38" y1="50" x2="55" y2="50" stroke="#333" stroke-width="2"/>
+                                <line x1="85" y1="48" x2="100" y2="48" stroke="#333" stroke-width="2"/>
+                                <line x1="85" y1="55" x2="100" y2="55" stroke="#333" stroke-width="2"/>
+                                <line x1="70" y1="42" x2="70" y2="32" stroke="#333" stroke-width="2"/>
+                                <line x1="25" y1="62" x2="25" y2="72" stroke="#333" stroke-width="1"/>
+                            </svg>
+                        </div>
+                        <div class="electron-count">24 valence e⁻</div>
+                    </div>
+                </div>
+
+                <!-- Detailed Example Modal -->
+                <div id="example-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <div id="modal-body"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formal Charge Section -->
+        <section id="formal-charge" class="section">
+            <div class="container">
+                <h2>Formal Charge</h2>
+                <p class="section-intro">Formal charge helps determine the best Lewis structure when multiple structures are possible.</p>
+
+                <div class="formula-box">
+                    <h3>Formal Charge Formula</h3>
+                    <div class="formula">
+                        FC = V - L - B
+                    </div>
+                    <div class="formula-legend">
+                        <p><strong>FC</strong> = Formal Charge</p>
+                        <p><strong>V</strong> = Valence electrons (from periodic table)</p>
+                        <p><strong>L</strong> = Lone pair electrons (non-bonding)</p>
+                        <p><strong>B</strong> = Bonding electrons ÷ 2</p>
+                    </div>
+                </div>
+
+                <div class="formal-charge-rules">
+                    <h3>Rules for Best Lewis Structure</h3>
+                    <ul class="rules-list">
+                        <li>The sum of all formal charges should equal the overall charge of the molecule/ion</li>
+                        <li>Formal charges should be as close to zero as possible</li>
+                        <li>Negative formal charges should be on more electronegative atoms</li>
+                        <li>Like charges should not be on adjacent atoms</li>
+                    </ul>
+                </div>
+
+                <div class="fc-example">
+                    <h3>Example: CO₂ Formal Charges</h3>
+                    <div class="fc-calculation">
+                        <div class="fc-molecule">
+                            <span class="fc-atom">
+                                <span class="fc-value">0</span>
+                                O
+                            </span>
+                            <span class="fc-bond">=</span>
+                            <span class="fc-atom">
+                                <span class="fc-value">0</span>
+                                C
+                            </span>
+                            <span class="fc-bond">=</span>
+                            <span class="fc-atom">
+                                <span class="fc-value">0</span>
+                                O
+                            </span>
+                        </div>
+                        <div class="fc-details">
+                            <p><strong>Oxygen:</strong> FC = 6 - 4 - 2 = 0</p>
+                            <p><strong>Carbon:</strong> FC = 4 - 0 - 4 = 0</p>
+                            <p class="fc-sum">Sum of formal charges = 0 (neutral molecule)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resonance Section -->
+        <section id="resonance" class="section section-alt">
+            <div class="container">
+                <h2>Resonance Structures</h2>
+                <p class="section-intro">Some molecules can be represented by multiple valid Lewis structures called resonance structures.</p>
+
+                <div class="resonance-explanation">
+                    <div class="resonance-text">
+                        <p>Resonance structures are different Lewis structures for the same molecule where electrons are arranged differently. The actual molecule is a <strong>hybrid</strong> of all resonance structures.</p>
+                        <div class="key-concept">
+                            <h4>Important!</h4>
+                            <p>Resonance structures differ only in electron placement, NOT atom positions. The double-headed arrow (↔) connects resonance structures.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resonance-example">
+                    <h3>Example: Ozone (O₃)</h3>
+                    <div class="resonance-structures">
+                        <div class="resonance-form">
+                            <svg viewBox="0 0 150 80" class="resonance-svg">
+                                <text x="75" y="45" text-anchor="middle" class="center-atom">O</text>
+                                <text x="25" y="45" text-anchor="middle" class="outer-atom">O</text>
+                                <text x="125" y="45" text-anchor="middle" class="outer-atom">O</text>
+                                <!-- Single bond left -->
+                                <line x1="40" y1="40" x2="60" y2="40" stroke="#333" stroke-width="2"/>
+                                <!-- Double bond right -->
+                                <line x1="90" y1="37" x2="110" y2="37" stroke="#333" stroke-width="2"/>
+                                <line x1="90" y1="44" x2="110" y2="44" stroke="#333" stroke-width="2"/>
+                                <!-- Lone pairs -->
+                                <circle cx="10" cy="35" r="3" fill="#333"/>
+                                <circle cx="10" cy="50" r="3" fill="#333"/>
+                                <circle cx="25" cy="25" r="3" fill="#333"/>
+                                <circle cx="25" cy="60" r="3" fill="#333"/>
+                                <circle cx="140" cy="40" r="3" fill="#333"/>
+                                <circle cx="140" cy="50" r="3" fill="#333"/>
+                                <circle cx="75" cy="60" r="3" fill="#333"/>
+                            </svg>
+                        </div>
+                        <div class="resonance-arrow">↔</div>
+                        <div class="resonance-form">
+                            <svg viewBox="0 0 150 80" class="resonance-svg">
+                                <text x="75" y="45" text-anchor="middle" class="center-atom">O</text>
+                                <text x="25" y="45" text-anchor="middle" class="outer-atom">O</text>
+                                <text x="125" y="45" text-anchor="middle" class="outer-atom">O</text>
+                                <!-- Double bond left -->
+                                <line x1="40" y1="37" x2="60" y2="37" stroke="#333" stroke-width="2"/>
+                                <line x1="40" y1="44" x2="60" y2="44" stroke="#333" stroke-width="2"/>
+                                <!-- Single bond right -->
+                                <line x1="90" y1="40" x2="110" y2="40" stroke="#333" stroke-width="2"/>
+                                <!-- Lone pairs -->
+                                <circle cx="10" cy="40" r="3" fill="#333"/>
+                                <circle cx="10" cy="50" r="3" fill="#333"/>
+                                <circle cx="140" cy="35" r="3" fill="#333"/>
+                                <circle cx="140" cy="50" r="3" fill="#333"/>
+                                <circle cx="125" cy="25" r="3" fill="#333"/>
+                                <circle cx="125" cy="60" r="3" fill="#333"/>
+                                <circle cx="75" cy="60" r="3" fill="#333"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="resonance-note">In reality, both O-O bonds in ozone are equivalent, with a bond order of 1.5 (between single and double).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exceptions Section -->
+        <section id="exceptions" class="section">
+            <div class="container">
+                <h2>Exceptions to the Octet Rule</h2>
+                <p class="section-intro">While most atoms follow the octet rule, there are important exceptions.</p>
+
+                <div class="exceptions-grid">
+                    <div class="exception-card">
+                        <h3>Incomplete Octet</h3>
+                        <p>Some atoms are stable with fewer than 8 electrons.</p>
+                        <div class="exception-examples">
+                            <div class="exception-molecule">
+                                <strong>BF₃</strong> - Boron has only 6 electrons
+                            </div>
+                            <div class="exception-molecule">
+                                <strong>BeH₂</strong> - Beryllium has only 4 electrons
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exception-card">
+                        <h3>Expanded Octet</h3>
+                        <p>Elements in period 3+ can have more than 8 electrons using d orbitals.</p>
+                        <div class="exception-examples">
+                            <div class="exception-molecule">
+                                <strong>SF₆</strong> - Sulfur has 12 electrons
+                            </div>
+                            <div class="exception-molecule">
+                                <strong>PCl₅</strong> - Phosphorus has 10 electrons
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exception-card">
+                        <h3>Odd Electron Species</h3>
+                        <p>Molecules with an odd number of valence electrons cannot satisfy the octet rule for all atoms.</p>
+                        <div class="exception-examples">
+                            <div class="exception-molecule">
+                                <strong>NO</strong> - 11 valence electrons
+                            </div>
+                            <div class="exception-molecule">
+                                <strong>NO₂</strong> - 17 valence electrons
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practice Section -->
+        <section id="practice" class="section section-alt">
+            <div class="container">
+                <h2>Practice Problems</h2>
+                <p class="section-intro">Test your understanding by drawing Lewis structures for these molecules.</p>
+
+                <div class="practice-container">
+                    <div class="practice-problem" data-answer="h2s">
+                        <div class="problem-header">
+                            <span class="problem-number">1</span>
+                            <span class="molecule">H₂S</span>
+                            <span class="difficulty easy">Easy</span>
+                        </div>
+                        <button class="reveal-btn">Show Answer</button>
+                        <div class="answer hidden">
+                            <p><strong>Total valence electrons:</strong> 2(1) + 6 = 8</p>
+                            <p><strong>Structure:</strong> H—S—H with 2 lone pairs on sulfur</p>
+                            <p><strong>Explanation:</strong> Similar to water, sulfur is central with two bonds to hydrogen and two lone pairs.</p>
+                        </div>
+                    </div>
+
+                    <div class="practice-problem" data-answer="ccl4">
+                        <div class="problem-header">
+                            <span class="problem-number">2</span>
+                            <span class="molecule">CCl₄</span>
+                            <span class="difficulty easy">Easy</span>
+                        </div>
+                        <button class="reveal-btn">Show Answer</button>
+                        <div class="answer hidden">
+                            <p><strong>Total valence electrons:</strong> 4 + 4(7) = 32</p>
+                            <p><strong>Structure:</strong> Carbon center with 4 single bonds to Cl atoms</p>
+                            <p><strong>Explanation:</strong> Each Cl has 3 lone pairs, carbon has no lone pairs.</p>
+                        </div>
+                    </div>
+
+                    <div class="practice-problem" data-answer="so2">
+                        <div class="problem-header">
+                            <span class="problem-number">3</span>
+                            <span class="molecule">SO₂</span>
+                            <span class="difficulty medium">Medium</span>
+                        </div>
+                        <button class="reveal-btn">Show Answer</button>
+                        <div class="answer hidden">
+                            <p><strong>Total valence electrons:</strong> 6 + 2(6) = 18</p>
+                            <p><strong>Structure:</strong> O=S—O or O—S=O (resonance structures)</p>
+                            <p><strong>Explanation:</strong> Sulfur is central with one double bond, one single bond, and one lone pair. Has resonance!</p>
+                        </div>
+                    </div>
+
+                    <div class="practice-problem" data-answer="cn-">
+                        <div class="problem-header">
+                            <span class="problem-number">4</span>
+                            <span class="molecule">CN⁻</span>
+                            <span class="difficulty medium">Medium</span>
+                        </div>
+                        <button class="reveal-btn">Show Answer</button>
+                        <div class="answer hidden">
+                            <p><strong>Total valence electrons:</strong> 4 + 5 + 1 = 10</p>
+                            <p><strong>Structure:</strong> [:C≡N:]⁻</p>
+                            <p><strong>Explanation:</strong> Triple bond between C and N, each with one lone pair. The negative charge is on carbon.</p>
+                        </div>
+                    </div>
+
+                    <div class="practice-problem" data-answer="no3-">
+                        <div class="problem-header">
+                            <span class="problem-number">5</span>
+                            <span class="molecule">NO₃⁻</span>
+                            <span class="difficulty hard">Hard</span>
+                        </div>
+                        <button class="reveal-btn">Show Answer</button>
+                        <div class="answer hidden">
+                            <p><strong>Total valence electrons:</strong> 5 + 3(6) + 1 = 24</p>
+                            <p><strong>Structure:</strong> Nitrogen center with one double bond and two single bonds to oxygen</p>
+                            <p><strong>Explanation:</strong> Has 3 equivalent resonance structures. Each N-O bond has bond order of 1.33.</p>
+                        </div>
+                    </div>
+
+                    <div class="practice-problem" data-answer="xef4">
+                        <div class="problem-header">
+                            <span class="problem-number">6</span>
+                            <span class="molecule">XeF₄</span>
+                            <span class="difficulty hard">Hard</span>
+                        </div>
+                        <button class="reveal-btn">Show Answer</button>
+                        <div class="answer hidden">
+                            <p><strong>Total valence electrons:</strong> 8 + 4(7) = 36</p>
+                            <p><strong>Structure:</strong> Xe center with 4 single bonds to F and 2 lone pairs</p>
+                            <p><strong>Explanation:</strong> Expanded octet! Xenon has 12 electrons around it. Square planar geometry.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Reference Section -->
+        <section id="reference" class="section">
+            <div class="container">
+                <h2>Quick Reference</h2>
+
+                <div class="reference-grid">
+                    <div class="reference-card">
+                        <h3>Common Bond Types</h3>
+                        <table class="reference-table">
+                            <tr>
+                                <td>Single Bond</td>
+                                <td>—</td>
+                                <td>2 electrons</td>
+                            </tr>
+                            <tr>
+                                <td>Double Bond</td>
+                                <td>=</td>
+                                <td>4 electrons</td>
+                            </tr>
+                            <tr>
+                                <td>Triple Bond</td>
+                                <td>≡</td>
+                                <td>6 electrons</td>
+                            </tr>
+                            <tr>
+                                <td>Lone Pair</td>
+                                <td>: or ••</td>
+                                <td>2 electrons</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="reference-card">
+                        <h3>Electronegativity Trend</h3>
+                        <p class="reference-note">Higher electronegativity = attracts electrons more strongly</p>
+                        <div class="electronegativity-scale">
+                            <span class="en-low">Low EN</span>
+                            <div class="en-arrow">→</div>
+                            <span class="en-high">High EN</span>
+                        </div>
+                        <p class="en-order">F > O > N > Cl > Br > C > S > H</p>
+                    </div>
+
+                    <div class="reference-card">
+                        <h3>Typical Bonding Patterns</h3>
+                        <table class="reference-table">
+                            <tr>
+                                <td>H</td>
+                                <td>1 bond, 0 lone pairs</td>
+                            </tr>
+                            <tr>
+                                <td>C</td>
+                                <td>4 bonds, 0 lone pairs</td>
+                            </tr>
+                            <tr>
+                                <td>N</td>
+                                <td>3 bonds, 1 lone pair</td>
+                            </tr>
+                            <tr>
+                                <td>O</td>
+                                <td>2 bonds, 2 lone pairs</td>
+                            </tr>
+                            <tr>
+                                <td>F, Cl, Br</td>
+                                <td>1 bond, 3 lone pairs</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Created for Columbia University CHEM UN1403 Outreach Activity</p>
+            <p class="copyright">Lewis Structures Educational Resource | 2025</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
