@@ -1,30 +1,38 @@
-/* CSS Variables */
+/* Modern Chemistry Design System */
 :root {
-    --primary-color: #2563eb;
-    --primary-dark: #1d4ed8;
-    --secondary-color: #7c3aed;
-    --accent-color: #06b6d4;
-    --success-color: #10b981;
-    --warning-color: #f59e0b;
-    --error-color: #ef4444;
-    --text-primary: #1f2937;
-    --text-secondary: #4b5563;
-    --text-light: #6b7280;
-    --bg-primary: #ffffff;
-    --bg-secondary: #f3f4f6;
-    --bg-tertiary: #e5e7eb;
-    --border-color: #d1d5db;
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
-    --radius-sm: 4px;
-    --radius-md: 8px;
+    --carbon: #1a1a2e;
+    --carbon-light: #2d2d44;
+    --nitrogen: #0f4c75;
+    --nitrogen-light: #1b6ca8;
+    --oxygen: #c9463d;
+    --oxygen-light: #e85a4f;
+    --hydrogen: #3282b8;
+    --chlorine: #48a999;
+    --sulfur: #d4a84b;
+    --phosphorus: #e07b53;
+
+    --surface: #fafbfc;
+    --surface-elevated: #ffffff;
+    --surface-muted: #f0f2f5;
+    --border: #e1e5ea;
+    --border-light: #eef1f4;
+
+    --text: #1a1a2e;
+    --text-secondary: #5a6270;
+    --text-muted: #8b919a;
+
+    --accent: #0f4c75;
+    --accent-hover: #1b6ca8;
+
+    --shadow-xs: 0 1px 2px rgba(26,26,46,0.04);
+    --shadow-sm: 0 2px 4px rgba(26,26,46,0.06);
+    --shadow-md: 0 4px 12px rgba(26,26,46,0.08);
+    --shadow-lg: 0 8px 24px rgba(26,26,46,0.12);
+
+    --radius: 8px;
     --radius-lg: 12px;
-    --radius-xl: 16px;
 }
 
-/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -33,34 +41,35 @@
 
 html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    color: var(--text-primary);
-    background-color: var(--bg-primary);
+    color: var(--text);
+    background: var(--surface);
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* Typography */
+h1, h2, h3, h4 {
     font-weight: 600;
     line-height: 1.3;
+    color: var(--text);
 }
 
 a {
-    color: var(--primary-color);
+    color: var(--accent);
     text-decoration: none;
-    transition: color 0.2s ease;
 }
 
 a:hover {
-    color: var(--primary-dark);
+    color: var(--accent-hover);
 }
 
-/* Container */
 .container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -71,25 +80,26 @@ a:hover {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-color);
-    z-index: 1000;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-light);
+    z-index: 100;
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 16px 24px;
+    padding: 14px 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.01em;
 }
 
 .nav-links {
@@ -100,206 +110,216 @@ a:hover {
 
 .nav-links a {
     color: var(--text-secondary);
-    font-weight: 500;
-    transition: color 0.2s ease;
+    font-size: 0.9rem;
+    font-weight: 450;
+    transition: color 0.15s;
 }
 
 .nav-links a:hover {
-    color: var(--primary-color);
+    color: var(--text);
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
-    padding: 140px 24px 80px;
-    background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 50%, #fefce8 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
-    flex-wrap: wrap;
+    padding: 120px 24px 80px;
+    background: var(--surface);
 }
 
 .hero-content {
-    max-width: 500px;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    color: var(--text-primary);
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: var(--text);
     margin-bottom: 16px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 .subtitle {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--text-secondary);
-    margin-bottom: 16px;
+    font-weight: 400;
+    margin-bottom: 12px;
 }
 
 .description {
-    color: var(--text-light);
-    margin-bottom: 32px;
-    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+    font-size: 1rem;
+    line-height: 1.7;
 }
 
 .cta-button {
-    display: inline-block;
-    padding: 14px 32px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: var(--carbon);
     color: white;
-    font-weight: 600;
-    border-radius: var(--radius-lg);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border-radius: var(--radius);
+    transition: all 0.2s;
 }
 
 .cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    background: var(--carbon-light);
     color: white;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
 }
 
+/* Hero Molecule Visual */
 .hero-visual {
     display: flex;
     justify-content: center;
 }
 
 .molecule-display {
-    background: white;
-    padding: 40px;
-    border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-xl);
+    background: var(--surface-elevated);
+    border: 1px solid var(--border);
+    padding: 48px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
 }
 
 .water-molecule {
     position: relative;
-    width: 200px;
-    height: 150px;
+    width: 180px;
+    height: 140px;
 }
 
 .water-molecule .atom {
     position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
-    font-size: 1.25rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    border-radius: 50%;
 }
 
 .water-molecule .oxygen {
-    background: linear-gradient(135deg, #ef4444, #dc2626);
+    width: 48px;
+    height: 48px;
+    background: var(--oxygen);
     color: white;
-    top: 50px;
-    left: 75px;
+    font-size: 1.125rem;
+    top: 46px;
+    left: 66px;
 }
 
 .water-molecule .hydrogen {
-    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    width: 36px;
+    height: 36px;
+    background: var(--hydrogen);
     color: white;
-    width: 40px;
-    height: 40px;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .water-molecule .h-left {
-    top: 55px;
-    left: 10px;
+    top: 52px;
+    left: 8px;
 }
 
 .water-molecule .h-right {
-    top: 55px;
-    right: 10px;
+    top: 52px;
+    right: 8px;
 }
 
 .water-molecule .bond {
     position: absolute;
-    height: 4px;
-    background: var(--text-primary);
-    top: 73px;
+    height: 3px;
+    background: var(--carbon);
+    top: 68px;
+    border-radius: 2px;
 }
 
 .water-molecule .bond-left {
-    width: 30px;
-    left: 45px;
+    width: 26px;
+    left: 40px;
 }
 
 .water-molecule .bond-right {
-    width: 30px;
-    right: 45px;
+    width: 26px;
+    right: 40px;
 }
 
 .water-molecule .lone-pair {
     position: absolute;
-    width: 8px;
-    height: 8px;
-    background: var(--text-primary);
+    width: 6px;
+    height: 6px;
+    background: var(--carbon);
     border-radius: 50%;
 }
 
 .water-molecule .lp-top {
-    top: 35px;
-    left: 96px;
+    top: 32px;
+    left: 86px;
 }
 
 .water-molecule .lp-top::after {
     content: '';
     position: absolute;
-    width: 8px;
-    height: 8px;
-    background: var(--text-primary);
+    width: 6px;
+    height: 6px;
+    background: var(--carbon);
     border-radius: 50%;
-    left: 20px;
+    left: 16px;
 }
 
 .water-molecule .lp-bottom {
-    top: 115px;
-    left: 96px;
+    top: 108px;
+    left: 86px;
 }
 
 .water-molecule .lp-bottom::after {
     content: '';
     position: absolute;
-    width: 8px;
-    height: 8px;
-    background: var(--text-primary);
+    width: 6px;
+    height: 6px;
+    background: var(--carbon);
     border-radius: 50%;
-    left: 20px;
+    left: 16px;
 }
 
 .molecule-label {
     text-align: center;
     margin-top: 20px;
-    font-weight: 600;
-    color: var(--text-secondary);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 500;
 }
 
 /* Sections */
 .section {
-    padding: 80px 0;
+    padding: 72px 0;
 }
 
 .section-alt {
-    background-color: var(--bg-secondary);
+    background: var(--surface-muted);
 }
 
 .section h2 {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
     text-align: center;
-    margin-bottom: 16px;
-    color: var(--text-primary);
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
 }
 
 .section-intro {
     text-align: center;
     color: var(--text-secondary);
-    max-width: 700px;
-    margin: 0 auto 48px;
-    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1rem;
 }
 
 /* Content Grid */
@@ -311,317 +331,331 @@ a:hover {
 }
 
 .text-content p {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     color: var(--text-secondary);
+    line-height: 1.7;
 }
 
 .key-concept {
-    background: linear-gradient(135deg, #eff6ff, #f0fdf4);
-    border-left: 4px solid var(--primary-color);
-    padding: 20px;
-    border-radius: var(--radius-md);
-    margin-top: 24px;
+    background: var(--surface-elevated);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--nitrogen);
+    padding: 18px 20px;
+    border-radius: var(--radius);
+    margin-top: 20px;
 }
 
 .key-concept h4 {
-    color: var(--primary-color);
-    margin-bottom: 8px;
+    color: var(--nitrogen);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
 }
 
 .key-concept p {
     margin-bottom: 0;
+    font-size: 0.95rem;
 }
 
 /* Lewis Example */
 .lewis-example {
-    background: white;
+    background: var(--surface-elevated);
+    border: 1px solid var(--border);
     padding: 24px;
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
 }
 
 .lewis-example h4 {
     text-align: center;
     margin-bottom: 16px;
-    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-weight: 500;
 }
 
 .structure-svg {
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
     display: block;
     margin: 0 auto;
 }
 
 .atom-label {
-    font-family: 'Inter', sans-serif;
-    font-size: 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 22px;
     font-weight: 600;
-    fill: var(--text-primary);
+    fill: var(--text);
 }
 
 .annotation {
     font-family: 'Inter', sans-serif;
-    font-size: 11px;
-    fill: var(--text-light);
+    font-size: 10px;
+    fill: var(--text-muted);
 }
 
 /* Group Cards */
 .periodic-guide {
-    margin-bottom: 48px;
+    margin-bottom: 40px;
 }
 
 .periodic-guide h3 {
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
 .group-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
 }
 
 .group-card {
-    background: white;
-    padding: 16px;
-    border-radius: var(--radius-md);
+    background: var(--surface-elevated);
+    border: 1px solid var(--border);
+    padding: 14px 12px;
+    border-radius: var(--radius);
     text-align: center;
-    box-shadow: var(--shadow-sm);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: border-color 0.15s, box-shadow 0.15s;
 }
 
 .group-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
+    border-color: var(--nitrogen);
+    box-shadow: var(--shadow-sm);
 }
 
 .group-number {
-    font-weight: 700;
-    color: var(--primary-color);
-    font-size: 0.9rem;
-    margin-bottom: 4px;
+    font-weight: 600;
+    color: var(--nitrogen);
+    font-size: 0.75rem;
+    margin-bottom: 2px;
 }
 
 .valence-count {
     font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 4px;
+    color: var(--text);
+    font-size: 0.9rem;
+    margin-bottom: 2px;
 }
 
 .examples {
-    font-size: 0.85rem;
-    color: var(--text-light);
-    margin-bottom: 12px;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
 }
 
 .dot-representation {
     font-family: 'JetBrains Mono', monospace;
-    background: var(--bg-secondary);
-    padding: 8px;
-    border-radius: var(--radius-sm);
+    background: var(--surface-muted);
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
 }
 
 .dot-representation .element {
     font-weight: 600;
-    color: var(--primary-color);
-}
-
-.dot-representation .dots {
-    color: var(--text-primary);
+    color: var(--text);
 }
 
 /* Octet Rule */
 .octet-rule {
-    background: white;
-    padding: 32px;
+    background: var(--surface-elevated);
+    border: 1px solid var(--border);
+    padding: 28px;
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
 }
 
 .octet-rule h3 {
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
 }
 
 .rule-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 32px;
+    gap: 28px;
     align-items: center;
 }
 
 .rule-text p {
     color: var(--text-secondary);
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
 }
 
 .octet-example {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: 14px;
     font-family: 'JetBrains Mono', monospace;
-    font-size: 1.1rem;
 }
 
 .octet-example .label {
     display: block;
     font-family: 'Inter', sans-serif;
-    font-size: 0.8rem;
-    color: var(--text-light);
-    margin-bottom: 8px;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
 }
 
 .octet-example .arrow {
-    font-size: 1.5rem;
-    color: var(--primary-color);
+    font-size: 1.25rem;
+    color: var(--nitrogen);
 }
 
-/* Steps Section */
+/* Steps */
 .steps-container {
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
 .step {
     display: flex;
-    gap: 24px;
-    margin-bottom: 32px;
-    background: white;
-    padding: 24px;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
+    gap: 20px;
+    margin-bottom: 20px;
+    background: var(--surface-elevated);
+    border: 1px solid var(--border);
+    padding: 20px;
+    border-radius: var(--radius);
 }
 
 .step-number {
     flex-shrink: 0;
-    width: 48px;
-    height: 48px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    width: 36px;
+    height: 36px;
+    background: var(--carbon);
     color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
-    font-size: 1.25rem;
+    font-weight: 600;
+    font-size: 0.9rem;
 }
 
 .step-content h3 {
-    margin-bottom: 8px;
-    color: var(--text-primary);
+    font-size: 1rem;
+    margin-bottom: 6px;
 }
 
 .step-content p {
     color: var(--text-secondary);
-    margin-bottom: 16px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
 }
 
 .step-example {
-    background: var(--bg-secondary);
-    padding: 16px;
-    border-radius: var(--radius-md);
+    background: var(--surface-muted);
+    padding: 14px;
+    border-radius: var(--radius);
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .step-example strong {
     font-family: 'Inter', sans-serif;
-    color: var(--text-primary);
+    color: var(--text);
 }
 
 .step-example p {
-    margin-bottom: 4px;
+    margin-bottom: 3px;
     color: var(--text-secondary);
 }
 
 .step-example .total {
     font-weight: 600;
-    color: var(--primary-color);
-    margin-top: 8px;
+    color: var(--nitrogen);
+    margin-top: 6px;
 }
 
 .step-example .bond-diagram,
 .step-example .structure-diagram {
     text-align: center;
-    font-size: 1.2rem;
-    padding: 12px;
-    background: white;
-    border-radius: var(--radius-sm);
-    margin: 12px 0;
+    font-size: 1.1rem;
+    padding: 10px;
+    background: var(--surface-elevated);
+    border-radius: 4px;
+    margin: 10px 0;
 }
 
 .step-example .structure-diagram.final {
-    background: linear-gradient(135deg, #dcfce7, #d1fae5);
-    color: var(--success-color);
+    background: #e8f5e9;
+    color: #2e7d32;
 }
 
 .step-example .success {
-    color: var(--success-color);
+    color: #2e7d32;
     font-weight: 600;
 }
 
 /* Examples Grid */
 .examples-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
 }
 
 .example-card {
-    background: white;
-    padding: 24px;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
+    background: var(--surface-elevated);
+    border: 1px solid var(--border);
+    padding: 20px;
+    border-radius: var(--radius);
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
 }
 
 .example-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
+    border-color: var(--nitrogen);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
 }
 
 .molecule-formula {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
     text-align: center;
 }
 
 .molecule-name {
     text-align: center;
-    color: var(--text-secondary);
-    margin-bottom: 16px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 14px;
 }
 
 .lewis-preview {
     display: flex;
     justify-content: center;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .mini-lewis {
     width: 100%;
-    max-width: 140px;
+    max-width: 120px;
 }
 
 .mini-lewis .center-atom,
 .mini-lewis .outer-atom {
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
     font-weight: 600;
-    fill: var(--text-primary);
+    fill: var(--text);
 }
 
 .electron-count {
     text-align: center;
-    font-size: 0.85rem;
-    color: var(--text-light);
-    background: var(--bg-secondary);
-    padding: 6px 12px;
-    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    background: var(--surface-muted);
+    padding: 4px 10px;
+    border-radius: 4px;
 }
 
 /* Modal */
@@ -632,10 +666,11 @@ a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 2000;
+    background: rgba(26,26,46,0.4);
+    z-index: 200;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
 .modal.active {
@@ -643,84 +678,88 @@ a:hover {
 }
 
 .modal-content {
-    background: white;
-    padding: 32px;
-    border-radius: var(--radius-xl);
-    max-width: 600px;
-    width: 90%;
+    background: var(--surface-elevated);
+    padding: 28px;
+    border-radius: var(--radius-lg);
+    max-width: 560px;
+    width: 100%;
     max-height: 80vh;
     overflow-y: auto;
     position: relative;
+    box-shadow: var(--shadow-lg);
 }
 
 .close-modal {
     position: absolute;
     top: 16px;
-    right: 20px;
-    font-size: 1.5rem;
+    right: 18px;
+    font-size: 1.25rem;
     cursor: pointer;
-    color: var(--text-light);
-    transition: color 0.2s ease;
+    color: var(--text-muted);
 }
 
 .close-modal:hover {
-    color: var(--text-primary);
+    color: var(--text);
 }
 
 /* Formal Charge */
 .formula-box {
-    background: linear-gradient(135deg, #eff6ff, #faf5ff);
-    padding: 32px;
+    background: var(--surface-elevated);
+    border: 1px solid var(--border);
+    padding: 28px;
     border-radius: var(--radius-lg);
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 }
 
 .formula-box h3 {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
+    font-size: 1rem;
 }
 
 .formula {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 600;
-    color: var(--primary-color);
-    margin-bottom: 16px;
+    color: var(--nitrogen);
+    margin-bottom: 14px;
 }
 
 .formula-legend {
     display: flex;
     justify-content: center;
-    gap: 32px;
+    gap: 24px;
     flex-wrap: wrap;
 }
 
 .formula-legend p {
     color: var(--text-secondary);
+    font-size: 0.9rem;
 }
 
 .formal-charge-rules {
-    background: white;
-    padding: 24px;
-    border-radius: var(--radius-lg);
-    margin-bottom: 32px;
+    background: var(--surface-elevated);
+    border: 1px solid var(--border);
+    padding: 20px;
+    border-radius: var(--radius);
+    margin-bottom: 24px;
 }
 
 .formal-charge-rules h3 {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
+    font-size: 1rem;
 }
 
 .rules-list {
     list-style: none;
-    padding-left: 0;
 }
 
 .rules-list li {
-    padding: 12px 16px;
-    padding-left: 40px;
+    padding: 10px 0 10px 28px;
     position: relative;
     color: var(--text-secondary);
-    border-bottom: 1px solid var(--bg-secondary);
+    border-bottom: 1px solid var(--border-light);
+    font-size: 0.9rem;
 }
 
 .rules-list li:last-child {
@@ -728,36 +767,41 @@ a:hover {
 }
 
 .rules-list li::before {
-    content: '✓';
+    content: '';
     position: absolute;
-    left: 12px;
-    color: var(--success-color);
-    font-weight: 700;
+    left: 0;
+    top: 14px;
+    width: 8px;
+    height: 8px;
+    background: var(--chlorine);
+    border-radius: 50%;
 }
 
 .fc-example {
-    background: white;
-    padding: 24px;
-    border-radius: var(--radius-lg);
+    background: var(--surface-elevated);
+    border: 1px solid var(--border);
+    padding: 20px;
+    border-radius: var(--radius);
 }
 
 .fc-example h3 {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
+    font-size: 1rem;
 }
 
 .fc-calculation {
     display: flex;
-    gap: 32px;
+    gap: 28px;
     align-items: center;
     flex-wrap: wrap;
 }
 
 .fc-molecule {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
 }
 
 .fc-atom {
@@ -766,114 +810,120 @@ a:hover {
 
 .fc-value {
     position: absolute;
-    top: -20px;
+    top: -16px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 0.75rem;
-    background: var(--success-color);
+    font-size: 0.65rem;
+    background: var(--chlorine);
     color: white;
-    padding: 2px 6px;
-    border-radius: var(--radius-sm);
+    padding: 1px 5px;
+    border-radius: 3px;
 }
 
 .fc-details p {
     color: var(--text-secondary);
-    margin-bottom: 4px;
+    margin-bottom: 3px;
+    font-size: 0.9rem;
 }
 
 .fc-sum {
     font-weight: 600;
-    color: var(--success-color);
-    margin-top: 8px;
+    color: var(--chlorine);
+    margin-top: 6px;
 }
 
 /* Resonance */
 .resonance-explanation {
-    max-width: 700px;
-    margin: 0 auto 32px;
+    max-width: 600px;
+    margin: 0 auto 28px;
 }
 
 .resonance-text p {
     color: var(--text-secondary);
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 }
 
 .resonance-example {
-    background: white;
-    padding: 32px;
+    background: var(--surface-elevated);
+    border: 1px solid var(--border);
+    padding: 28px;
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
 }
 
 .resonance-example h3 {
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
+    font-size: 1rem;
 }
 
 .resonance-structures {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 24px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 .resonance-form {
-    background: var(--bg-secondary);
-    padding: 16px;
-    border-radius: var(--radius-md);
+    background: var(--surface-muted);
+    padding: 14px;
+    border-radius: var(--radius);
 }
 
 .resonance-svg {
-    width: 150px;
+    width: 140px;
 }
 
 .resonance-arrow {
-    font-size: 2rem;
-    color: var(--primary-color);
+    font-size: 1.5rem;
+    color: var(--nitrogen);
 }
 
 .resonance-note {
     text-align: center;
-    color: var(--text-secondary);
-    margin-top: 24px;
+    color: var(--text-muted);
+    margin-top: 20px;
+    font-size: 0.9rem;
     font-style: italic;
 }
 
 /* Exceptions */
 .exceptions-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
 }
 
 .exception-card {
-    background: white;
-    padding: 24px;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
+    background: var(--surface-elevated);
+    border: 1px solid var(--border);
+    padding: 20px;
+    border-radius: var(--radius);
 }
 
 .exception-card h3 {
-    color: var(--primary-color);
-    margin-bottom: 12px;
+    color: var(--text);
+    font-size: 1rem;
+    margin-bottom: 8px;
 }
 
 .exception-card p {
     color: var(--text-secondary);
-    margin-bottom: 16px;
+    margin-bottom: 14px;
+    font-size: 0.9rem;
 }
 
 .exception-examples {
-    background: var(--bg-secondary);
-    padding: 16px;
-    border-radius: var(--radius-md);
+    background: var(--surface-muted);
+    padding: 12px;
+    border-radius: var(--radius);
 }
 
 .exception-molecule {
-    padding: 8px 0;
-    border-bottom: 1px solid var(--border-color);
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border-light);
     color: var(--text-secondary);
+    font-size: 0.9rem;
 }
 
 .exception-molecule:last-child {
@@ -881,95 +931,98 @@ a:hover {
 }
 
 .exception-molecule strong {
-    color: var(--text-primary);
+    color: var(--text);
     font-family: 'JetBrains Mono', monospace;
 }
 
-/* Practice Section */
+/* Practice */
 .practice-container {
-    max-width: 700px;
+    max-width: 640px;
     margin: 0 auto;
 }
 
 .practice-problem {
-    background: white;
-    padding: 24px;
-    border-radius: var(--radius-lg);
-    margin-bottom: 16px;
-    box-shadow: var(--shadow-sm);
+    background: var(--surface-elevated);
+    border: 1px solid var(--border);
+    padding: 18px;
+    border-radius: var(--radius);
+    margin-bottom: 12px;
 }
 
 .problem-header {
     display: flex;
     align-items: center;
-    gap: 16px;
-    margin-bottom: 16px;
+    gap: 14px;
+    margin-bottom: 12px;
 }
 
 .problem-number {
-    width: 32px;
-    height: 32px;
-    background: var(--bg-secondary);
+    width: 28px;
+    height: 28px;
+    background: var(--surface-muted);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 600;
+    font-size: 0.85rem;
     color: var(--text-secondary);
 }
 
 .problem-header .molecule {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--text);
 }
 
 .difficulty {
     margin-left: auto;
-    padding: 4px 12px;
-    border-radius: var(--radius-sm);
-    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.65rem;
     font-weight: 600;
     text-transform: uppercase;
+    letter-spacing: 0.03em;
 }
 
 .difficulty.easy {
-    background: #dcfce7;
-    color: #166534;
+    background: #e8f5e9;
+    color: #2e7d32;
 }
 
 .difficulty.medium {
-    background: #fef3c7;
-    color: #92400e;
+    background: #fff3e0;
+    color: #ef6c00;
 }
 
 .difficulty.hard {
-    background: #fee2e2;
-    color: #991b1b;
+    background: #ffebee;
+    color: #c62828;
 }
 
 .reveal-btn {
-    background: var(--primary-color);
+    background: var(--carbon);
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: var(--radius-md);
+    padding: 8px 16px;
+    border-radius: var(--radius);
     cursor: pointer;
     font-weight: 500;
-    transition: background 0.2s ease;
+    font-size: 0.85rem;
+    transition: background 0.15s;
 }
 
 .reveal-btn:hover {
-    background: var(--primary-dark);
+    background: var(--carbon-light);
 }
 
 .answer {
-    margin-top: 16px;
-    padding: 16px;
-    background: var(--bg-secondary);
-    border-radius: var(--radius-md);
-    border-left: 4px solid var(--success-color);
+    margin-top: 14px;
+    padding: 14px;
+    background: var(--surface-muted);
+    border-radius: var(--radius);
+    border-left: 3px solid var(--chlorine);
 }
 
 .answer.hidden {
@@ -978,29 +1031,31 @@ a:hover {
 
 .answer p {
     color: var(--text-secondary);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
 }
 
 .answer p:last-child {
     margin-bottom: 0;
 }
 
-/* Reference Section */
+/* Reference */
 .reference-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
 }
 
 .reference-card {
-    background: var(--bg-secondary);
-    padding: 24px;
-    border-radius: var(--radius-lg);
+    background: var(--surface-elevated);
+    border: 1px solid var(--border);
+    padding: 20px;
+    border-radius: var(--radius);
 }
 
 .reference-card h3 {
-    margin-bottom: 16px;
-    color: var(--text-primary);
+    margin-bottom: 14px;
+    font-size: 0.95rem;
 }
 
 .reference-table {
@@ -1009,9 +1064,10 @@ a:hover {
 }
 
 .reference-table td {
-    padding: 10px 12px;
-    border-bottom: 1px solid var(--border-color);
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-light);
     color: var(--text-secondary);
+    font-size: 0.9rem;
 }
 
 .reference-table tr:last-child td {
@@ -1019,107 +1075,94 @@ a:hover {
 }
 
 .reference-table td:first-child {
-    font-weight: 600;
-    color: var(--text-primary);
+    font-weight: 500;
+    color: var(--text);
 }
 
 .reference-note {
-    color: var(--text-light);
-    font-size: 0.9rem;
-    margin-bottom: 16px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 12px;
 }
 
 .electronegativity-scale {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px;
-    background: linear-gradient(90deg, #fee2e2, #fef3c7, #dcfce7);
-    border-radius: var(--radius-md);
-    margin-bottom: 12px;
+    padding: 12px 16px;
+    background: linear-gradient(90deg, #ffebee, #fff3e0, #e8f5e9);
+    border-radius: var(--radius);
+    margin-bottom: 10px;
 }
 
 .en-low {
-    color: #991b1b;
+    color: #c62828;
     font-weight: 600;
+    font-size: 0.85rem;
 }
 
 .en-high {
-    color: #166534;
+    color: #2e7d32;
     font-weight: 600;
+    font-size: 0.85rem;
 }
 
 .en-arrow {
-    font-size: 1.5rem;
-    color: var(--text-light);
+    font-size: 1.25rem;
+    color: var(--text-muted);
 }
 
 .en-order {
     font-family: 'JetBrains Mono', monospace;
     text-align: center;
     color: var(--text-secondary);
+    font-size: 0.85rem;
 }
 
 /* Footer */
 .footer {
-    background: var(--text-primary);
-    color: white;
-    padding: 40px 24px;
+    background: var(--carbon);
+    color: rgba(255,255,255,0.9);
+    padding: 32px 24px;
     text-align: center;
 }
 
 .footer p {
-    margin-bottom: 8px;
-    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 4px;
+    font-size: 0.9rem;
 }
 
 .copyright {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.6);
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
     }
 
-    .hero {
-        padding: 120px 24px 60px;
-        flex-direction: column;
+    .hero-content {
+        grid-template-columns: 1fr;
         text-align: center;
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
     }
 
-    .content-grid {
-        grid-template-columns: 1fr;
-    }
-
+    .content-grid,
     .rule-content {
         grid-template-columns: 1fr;
-    }
-
-    .octet-example {
-        flex-direction: column;
     }
 
     .step {
         flex-direction: column;
     }
 
-    .fc-calculation {
-        flex-direction: column;
-    }
-
+    .fc-calculation,
     .resonance-structures {
         flex-direction: column;
-    }
-
-    .formula-legend {
-        flex-direction: column;
-        gap: 8px;
     }
 }
